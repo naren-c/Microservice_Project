@@ -1,0 +1,26 @@
+version: '3'
+services:
+  rabbitmq:
+    image: rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+
+  producer:
+    build: ./producer
+    ports:
+      - "5000:5000"
+
+  consumer_one:
+    build: ./consumer_one
+
+  consumer_two:
+    build: ./consumer_two
+
+  consumer_three:
+    build: ./consumer_three
+
+  consumer_four:
+    build: ./consumer_four
+
+
